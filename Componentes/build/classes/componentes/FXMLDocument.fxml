@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="669.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="componentes.FXMLDocumentController">
+    <children>
+        <Button fx:id="capturarCombo" layoutX="14.0" layoutY="117.0" onAction="#capturarCombo" prefHeight="31.0" prefWidth="168.0" text="Capturar ComboBox" />
+        <Label fx:id="lbRespCombo" layoutX="14.0" layoutY="150.0" minHeight="16" minWidth="69" prefHeight="38.0" prefWidth="215.0" text="Combo">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="14.0" text="ComboBox">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBox" layoutX="14.0" layoutY="67.0" prefHeight="38.0" prefWidth="193.0" promptText="Animal" />
+      <CheckBox fx:id="cb1" layoutX="14.0" layoutY="252.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="95.0" text="Java">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cb2" layoutX="14.0" layoutY="290.0" mnemonicParsing="false" text="Php">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="capturarCheck" layoutX="14.0" layoutY="315.0" mnemonicParsing="false" onAction="#capturarCheck" prefHeight="31.0" prefWidth="168.0" text="Capturar CheckBox" />
+      <Label fx:id="lbRespCheck" layoutX="15.0" layoutY="353.0" minHeight="16" minWidth="69" prefHeight="38.0" prefWidth="341.0" text="CheckBox">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="14.0" text="Radio Button">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="r1" layoutX="381.0" layoutY="86.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="104.0" selected="true" text="Comidas">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleRadioOpt" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="r2" layoutX="381.0" layoutY="133.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="104.0" selected="true" text="Bebidas" toggleGroup="$toggleRadioOpt">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="381.0" layoutY="180.0" mnemonicParsing="false" onAction="#capturarRadio" prefHeight="31.0" prefWidth="168.0" text="Capturar RadioButton" />
+      <Label fx:id="lbRespRadio" layoutX="382.0" layoutY="223.0" minHeight="16" minWidth="69" prefHeight="38.0" prefWidth="215.0" text="Radio Button">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
