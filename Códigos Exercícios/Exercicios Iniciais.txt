@@ -1,0 +1,206 @@
+IDADES PARA VOTAR:
+
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int idade, controle;
+	    
+	    do{
+	        System.out.println("IDADE PARA VOTAR");
+	        System.out.println("Escolha uma opção: ");
+	        System.out.println("1) Digitar idade.");
+	        System.out.println("2) Sair.");
+	        System.out.print("Opção: ");
+	        
+	        Scanner menu = new Scanner(System.in);
+                    controle = menu.nextInt();
+            
+            if(controle == 1)
+            {
+                System.out.println("\nQual a sua idade? ");
+	    System.out.print("Idade: ");
+                Scanner scanner = new Scanner(System.in);
+                idade = scanner.nextInt()
+		
+		        if(idade >= 16 & idade < 18)
+		        {
+		            System.out.println("\n--Voto Facultativo--\n");
+		        }
+		        else if(idade >= 18 & idade < 70)
+		        {
+		            System.out.println("\n--Voto obrigatório--\n");
+		        }
+		        else if(idade >= 70 & idade < 150)
+		        {
+		            System.out.println("\n--Voto Facultativo--\n");
+		        }
+		        else if(idade < 16 & idade >= 0)
+		        {
+		            System.out.println("\n--Não pode votar--\n");
+		        }
+		        else
+		        {
+		            System.out.println("\n--Acredito que essa idade é meio irregular--\n");
+		        }
+            }
+            
+            else
+            {
+                System.out.println("\nOpção inválida\n");
+            }
+            
+	    }
+	    while(controle != 2);
+	   
+	    for (int i = 0; i < 100; ++i)
+	    {
+            System.out.println();
+	    }
+	    System.out.println("\nAté a próxima");
+	}
+	
+}
+
+
+BOLA
+
+
+Main.java
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Bola kiko = new Bola();
+	    kiko.nomear("Bola Kiko");
+	    kiko.pintar("Colorida");
+	    kiko.definirtamanho(7);
+	    kiko.encher();
+	    
+	    System.out.println(kiko.nome);
+	    System.out.println(kiko.cor);
+	    System.out.println(kiko.tamanho);
+	    System.out.println(kiko.cheia);
+	    System.out.println("\nOk");
+	    
+	    Bola bola7 = new Bola();
+	    bola7.nomear("\nBola 7");
+	    bola7.pintar("Preta");
+	    bola7.definirtamanho(3);
+	    bola7.encher();
+	    
+	    System.out.println(bola7.nome);
+	    System.out.println(bola7.cor);
+	    System.out.println(bola7.tamanho);
+	    System.out.println(bola7.cheia);
+	    System.out.println("\nOk");
+	}
+	
+}
+
+
+Bola.java
+
+import java.util.Scanner;
+
+public class Bola
+{   
+    //Atributos
+    
+    String cor;
+    int tamanho;
+    boolean cheia;
+    String nome;
+    
+    //Métodos
+    
+    void encher()
+    {
+        cheia = true;
+    }
+    void esvaziar()
+    {
+        cheia = false;
+    }
+    void pintar(String cor)
+    {
+        this.cor = cor;
+    }
+    void definirtamanho(int tam)
+    {   
+        if (tam > 0)
+            tamanho = tam;
+    }
+    void nomear(String nome)
+    {
+        this.nome = nome;
+    }
+}
+
+Maior Número
+
+Matematica.java
+
+package matematica;
+
+import java.util.Scanner;
+
+public class Matematica 
+{
+
+    public static void main(String[] args) 
+    {    
+        
+        int j1, j2;
+        
+        System.out.println("Digite dois números");
+        System.out.print("Numero 1: ");
+        Scanner n1 = new Scanner(System.in);
+        j1 = n1.nextInt();
+        
+        System.out.print("Numero 2: ");
+        Scanner n2 = new Scanner(System.in);
+        j2 = n2.nextInt();
+        
+        MaiorNumero maior = new MaiorNumero();
+        
+        maior.verificarMaiorNumero(j1,j2 );       
+    }
+    
+}
+
+
+
+MaiorNumero.java
+
+package matematica;
+
+public class MaiorNumero 
+{
+
+    public void verificarMaiorNumero(int num1,int num2)
+    {
+     if(num1 > num2)
+        {
+            System.out.println(num1 + " é o maior número");
+        }
+        else if(num2 > num1)
+        {
+            System.out.println(num2 + " é o maior número");
+        }
+        else
+        {
+            System.out.println("Os números são iguais");
+        }
+    }
+}
+
+
+
+

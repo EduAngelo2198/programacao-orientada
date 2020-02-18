@@ -1,0 +1,69 @@
+Main
+
+import java.util.Scanner;
+
+public class AulaTeste 
+{
+
+    public static void main(String[] args)
+    {
+       
+        Pessoa du = new Pessoa("Eduardo Angelo de Lima", 20, 87.5);
+        
+        //du.setNome("Eduardo Angelo de Lima");
+        //du.setIdade(20);
+        //du.setPeso(87.5);
+        
+        System.out.println("Nome: " + du.getNome());
+        System.out.println("Idade: " + du.getIdade());
+        System.out.println("Peso: " + du.getPeso());      
+    }
+    
+}
+
+Pessoa
+
+public class Pessoa 
+{
+    private String nome;
+    private int idade;
+    private double peso;
+    
+    public Pessoa(String nome, int idade, double peso)
+    {
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+    }
+    
+    public void setNome(String nomeRecebido)
+    {
+        this.nome = nomeRecebido;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+    
+    public void setIdade (int idadeRecebida)
+    {
+        this.idade = idadeRecebida;
+    }
+    
+    public int getIdade()
+    {
+        return this.idade;
+    }
+    
+    public void setPeso (double pesoRecebido)
+    {
+        this.peso = pesoRecebido;
+    }
+    
+    public double getPeso()
+    {
+        return this.peso;
+    }
+    
+}
